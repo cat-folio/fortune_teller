@@ -1,0 +1,148 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+body{
+	background-color: #ccc;  
+}
+
+#board{
+	width:100%;
+}
+
+#ball{
+	width: 400px;
+    height: 400px;
+    -webkit-border-radius: 50%;
+       -moz-border-radius: 50%;
+            border-radius: 50%;
+    background-color: #0D0579;
+    position: relative;
+    top: 50px;
+    margin: 0 auto;
+}
+
+.title{
+    font-size: 21px;
+    text-align: center;
+    padding-top: 30px;
+    text-transform: uppercase;
+}
+
+.window{
+	width: 250px;
+    height: 250px;
+    -webkit-border-radius: 50%;
+       -moz-border-radius: 50%;
+            border-radius: 50%;
+    background-color: #1D1D1D;
+    position: absolute;
+    top: 60px;
+    left: 77px;
+    box-shadow: 0 0px 49px 8px rgba(0,0,0, 1) inset;
+}
+
+#triangle{
+    width: 0;
+    height: 0;
+    border-left: 95px solid transparent;
+    border-right: 95px solid transparent;
+    border-top: 125px solid #0720CC;
+    position: absolute;
+    top: 75px;
+    left: 30px;
+    -webkit-animation: tr-anim 4s ease-out;
+       -moz-animation: tr-anim 4s ease-out;
+            animation: tr-anim 4s ease-out;
+               -webkit-animation-play-state: paused;
+                  -moz-animation-play-state: paused;
+                       animation-play-state: paused;
+}
+
+@-webkit-keyframes tr-anim {
+    from{
+        transform: scale(0.5) rotate(10deg);
+        opacity:0;
+    }
+    to{
+        transform: scale(1) rotate(0deg);
+        opacity:1;
+    }
+}
+
+@-moz-keyframes tr-anim {
+    from{
+        transform: scale(0.5) rotate(10deg);
+        opacity:0;
+    }
+    to{
+        transform: scale(1) rotate(0deg);
+        opacity:1;
+    }
+}
+
+@keyframes tr-anim {
+    from{
+        transform: scale(0.5) rotate(10deg);
+        opacity:0;
+    }
+    to{
+        transform: scale(1) rotate(0deg);
+        opacity:1;
+    }
+}
+
+#win-text{
+    width: 100px;
+    position: absolute;
+    top: -120px;
+    left: -45px;
+    color: #fff;
+    opacity: 0;
+    text-align: center;
+    animation: appear-text 4s ease-out forwards;
+}
+
+#btn{
+    padding: 10px;
+    font-size: 20px;
+    background-color: #EA2814;
+    color: #fff;
+    border: 2px solid #EA2814;
+    cursor: pointer;
+    margin: 100px auto;
+    display: block;
+    -webkit-transition:all 0.3s ease-in;
+       -moz-transition:all 0.3s ease-in;
+            transition:all 0.3s ease-in;
+}
+
+.btn:hover{
+    background-color: rgba(0,0,0, 0);
+    color:#EA2814;
+}
+
+.btn:active{
+    -webkit-transform: translateY(3px);
+       -moz-transform: translateY(3px);
+            transform: translateY(3px);
+
+}
+
+@-webkit-keyframes appear-text {
+    to{
+        opacity:1;
+    }
+}
+
+@-moz-keyframes appear-text {
+    to{
+        opacity:1;
+    }
+}
+
+@keyframes appear-text {
+    to{
+        opacity:1;
+    }
+}
